@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>João Victor · Desenvolvedor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--surface:#fff;--surface2:#eff1fa;--text:#12142a;--muted:#5a5e7c;--line:#e0e3f1;--accent:#5865f2;--accent2:#7b86ff;--ok:#23a55a;--glow:rgba(88,101,242,.16);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0d19;--surface:#151729;--surface2:#1c1f35;--text:#eef0ff;--muted:#9a9fc4;--line:#272b49;--glow:rgba(88,101,242,.26)}}
+:root[data-theme="dark"]{--bg:#0c0d19;--surface:#151729;--surface2:#1c1f35;--text:#eef0ff;--muted:#9a9fc4;--line:#272b49;--glow:rgba(88,101,242,.26)}
+*,*::before,*::after{box-sizing:inherit}
+html{color-scheme:light dark;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif;background-image:radial-gradient(56rem 28rem at 50% -8%,var(--glow),transparent)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#fff;font-size:12px;font-weight:800;letter-spacing:.02em}
+.links{display:flex;gap:28px;font-size:14px;color:var(--muted);font-weight:500}
+.links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--surface);transition:.2s}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 8px 22px var(--glow)}
+.btn.p:hover{background:#4752c4}
+.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;background:var(--surface);border:1px solid var(--line);font-size:13px;color:var(--muted);font-weight:500}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(35,165,90,.18)}
+h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.08;margin:20px 0 18px;font-weight:800;letter-spacing:-.035em}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:18px;max-width:500px;margin:0}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.msg{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 24px 60px var(--glow)}
+.row{display:flex;gap:14px}
+.av{flex:none;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#fff;font-weight:700;font-size:14px}
+.name{font-weight:600}.tag{background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:8px;vertical-align:middle;letter-spacing:.04em}
+.cmd{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)}
+.embed{margin-top:12px;border-left:3px solid var(--accent);background:var(--surface2);border-radius:6px;padding:16px}
+.embed h4{margin:0 0 6px;font-size:15px}.embed p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:12px;padding:4px 10px;border-radius:6px;background:var(--surface);border:1px solid var(--line)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-weight:600;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);margin:10px 0 14px;letter-spacing:-.025em;line-height:1.2}
+.sub{color:var(--muted);max-width:580px;margin:0 0 36px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p{color:var(--muted);margin:0 0 16px}
+.facts{display:grid;gap:12px;align-content:start}
+.fact{display:flex;justify-content:space-between;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:14.5px}
+.fact span{color:var(--muted)}.fact b{font-weight:600;text-align:right}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;transition:.2s}
+.card:hover{border-color:var(--accent);box-shadow:0 10px 30px var(--glow)}
+.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{padding:24px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.step i{font-style:normal;font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:13px}
+.step h3{margin:8px 0 6px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:14px}
+.contact{text-align:center;background:linear-gradient(135deg,var(--accent),#4450c9);color:#fff;border-radius:20px;padding:60px 24px}
+.contact h2{margin-top:0}.contact p{opacity:.9;max-width:460px;margin:0 auto 26px}
+.contact .btn{background:#fff;color:#4450c9;border-color:#fff}
+.handle{margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:13px;opacity:.85}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px;text-align:center;margin-top:64px}
+@media(max-width:860px){.hero,.about{grid-template-columns:1fr}.hero{padding-top:56px}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.links{display:none}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<div class="brand"><div class="logo">JV</div>João Victor</div>
+<div class="links"><a href="#sobre">Sobre</a><a href="#stack">Tecnologias</a><a href="#processo">Processo</a><a href="#contato">Contato</a></div>
+<a class="btn p" href="#contato" style="padding:9px 18px;font-size:14px">Falar comigo</a>
+</div></nav>
+ 
+<main class="wrap">
+<div class="hero">
+<div>
+<span class="badge"><i class="dot"></i>Disponível para novos projetos</span>
+<h1>Olá, eu sou o <span>João Victor</span>.</h1>
+<p class="lead">Desenvolvedor full stack focado em sites, bots e aplicações web rápidas, bem estruturadas e fáceis de manter.</p>
+<div class="cta">
+<a class="btn p" href="#contato">Entrar em contato</a>
+<a class="btn" href="#stack">Ver tecnologias</a>
+</div>
+</div>
+<div class="msg">
+<div class="row">
+<div class="av">JV</div>
+<div style="min-width:0">
+<div><span class="name">João Victor</span><span class="tag">DEV</span></div>
+<div class="cmd">/sobre-mim</div>
+<div class="embed">
+<h4>Desenvolvedor Full Stack</h4>
+<p>Construo do back-end à interface, com código limpo e atenção aos detalhes.</p>
+<div class="chips"><span class="chip">Node.js</span><span class="chip">Next.js</span><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">CSS</span><span class="chip">HTML</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+<section id="sobre">
+<div class="about">
+<div>
+<div class="eyebrow">Sobre</div>
+<h2>Código limpo, entrega confiável.</h2>
+<p>Trabalho com desenvolvimento web e automação, do servidor ao visual. Gosto de entender o problema antes de escrever a primeira linha e de entregar algo que funcione bem e seja simples de evoluir.</p>
+<p>Estou sempre aprendendo novas ferramentas para escolher a melhor para cada desafio.</p>
+</div>
+<div class="facts">
+<div class="fact"><span>Área</span><b>Desenvolvimento Full Stack</b></div>
+<div class="fact"><span>Foco</span><b>Web, bots e automações</b></div>
+<div class="fact"><span>Idioma</span><b>Português (BR)</b></div>
+<div class="fact"><span>Status</span><b>Disponível</b></div>
+</div>
+</div>
+</section>
+ 
+<section id="stack">
+<div class="eyebrow">Tecnologias</div>
+<h2>Minha stack</h2>
+<p class="sub">Ferramentas que uso no dia a dia para cobrir todas as camadas de um projeto.</p>
+<div class="grid">
+<div class="card"><h3>Back-end</h3><p>APIs, integrações, bots e automações com código organizado.</p><div class="chips"><span class="chip">Node.js</span><span class="chip">Python</span></div></div>
+<div class="card"><h3>Front-end</h3><p>Interfaces modernas, responsivas e otimizadas para performance.</p><div class="chips"><span class="chip">Next.js</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div></div>
+<div class="card"><h3>E mais</h3><p>Outras ferramentas conforme a necessidade de cada projeto.</p><div class="chips"><span class="chip">Git</span><span class="chip">APIs REST</span><span class="chip">+ outras</span></div></div>
+</div>
+</section>
+ 
+<section id="processo">
+<div class="eyebrow">Processo</div>
+<h2>Como eu trabalho</h2>
+<p class="sub">Um fluxo simples e transparente, do primeiro contato à entrega.</p>
+<div class="steps">
+<div class="step"><i>01</i><h3>Conversa</h3><p>Entendo sua ideia e os objetivos do projeto.</p></div>
+<div class="step"><i>02</i><h3>Planejamento</h3><p>Defino escopo, tecnologias e prazos.</p></div>
+<div class="step"><i>03</i><h3>Desenvolvimento</h3><p>Construo com código limpo e acompanhamento.</p></div>
+<div class="step"><i>04</i><h3>Entrega</h3><p>Testes, ajustes finais e suporte pós-entrega.</p></div>
+</div>
+</section>
+ 
+<section id="contato" style="border-top:0">
+<div class="contact">
+<h2>Vamos conversar sobre o seu projeto?</h2>
+<p>Me chame no Discord e conte a sua ideia. Respondo o mais rápido possível.</p>
+<a class="btn" href="#contato">Chamar no Discord</a>
+<div class="handle">discord: victorxdev</div>
+</div>
+</section>
+</main>
+<footer>© 2026 João Victor. Todos os direitos reservados.</footer>
+</body>
+</html>
+ 
